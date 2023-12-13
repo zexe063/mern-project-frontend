@@ -12,7 +12,7 @@ const data = await axios.post('https://mern-project-woad.vercel.app/auth/login',
 
 if(data.status==200){
  toast.success("login sucess");
- window.location.replace("/https://mern-frontend-smoky.vercel.app/")
+ window.location.replace("https://mern-frontend-smoky.vercel.app/")
 
 
 return data.data;
