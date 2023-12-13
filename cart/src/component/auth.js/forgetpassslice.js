@@ -12,7 +12,7 @@ export const forgetpassword = createAsyncThunk(
         const {data} = await axios.post("https://mern-project-woad.vercel.app/auth/forgetpassword",id);
         if(data == 'forget'){
 toast.success("password reset sucessfull")
-window.location.replace("https://mern-project-woad.vercel.app/auth/login")
+window.location.replace("https://mern-frontend-smoky.vercel.app//auth/login")
         }
         else if(data== "user not register"){
   toast.error("user not register")
