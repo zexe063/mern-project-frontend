@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 export const getorder = createAsyncThunk(
     "order/getorder",
     async(id)=>{
-const {data} = await axios.get("http://localhost:9000/orders");
+const {data} = await axios.get("https://mern-project-woad.vercel.app/orders");
 return data;
 
     }
@@ -23,7 +23,7 @@ return data;
         const formattedCart = id.map(({ _id, ...rest }) => rest);
        
       
-        const {data} = await axios.post("http://localhost:9000/orders",formattedCart);
+        const {data} = await axios.post("https://mern-project-woad.vercel.app/orders",formattedCart);
         
         return data;
     }
@@ -32,7 +32,7 @@ export const deleteorder = createAsyncThunk(
     "order/deleteorder",
     async(id)=>{
       
-const data = await axios.delete(`http://localhost:9000/orders/${id}`);
+const data = await axios.delete(`https://mern-project-woad.vercel.app/orders/${id}`);
 toast.success("order cancel")
 return id;
 

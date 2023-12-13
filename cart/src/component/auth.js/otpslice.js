@@ -13,7 +13,7 @@ export const getotp = createAsyncThunk(
     "oto/getopt",
     async(id)=>{
    
-        const {data}= await axios.post("http://localhost:9000/otp", {
+        const {data}= await axios.post("https://mern-project-woad.vercel.app/otp", {
             email:id
         });
           

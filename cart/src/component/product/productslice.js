@@ -19,7 +19,7 @@ export const sortproduct = createAsyncThunk(
     
     const arr = id.split(":");
 
-        const {data} = await axios.get(`http://localhost:9000/products/sort?${arr[0]}=${arr[1]}`);
+        const {data} = await axios.get(`https://mern-project-woad.vercel.app/products/sort?${arr[0]}=${arr[1]}`);
         console.log(data)
      return data;
    

@@ -70,7 +70,7 @@ const totalprice = price-discountprice;
 
 
 async function payment(){
-    const {data} = await axios.post("http://localhost:9000/payment",{
+    const {data} = await axios.post("https://mern-project-woad.vercel.app/payment",{
         price:totalprice
     });
 

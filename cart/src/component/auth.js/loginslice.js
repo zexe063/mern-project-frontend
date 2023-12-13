@@ -8,11 +8,11 @@ export const getuser = createAsyncThunk(
     "login/getuser",
     async(id)=>{
    console.group(id)
-const data = await axios.post('http://localhost:9000/auth/login',id);
+const data = await axios.post('https://mern-project-woad.vercel.app/auth/login',id);
 
 if(data.status==200){
  toast.success("login sucess");
- window.location.replace("http://localhost:3000/")
+ window.location.replace("https://mern-project-woad.vercel.app/")
 
 
 return data.data;

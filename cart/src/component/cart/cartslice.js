@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
  export const getcart = createAsyncThunk(
     "cart/getcart",
     async(id)=>{
-     const  {data} = await axios.get("http://localhost:9000/cart");
+     const  {data} = await axios.get("https://mern-project-woad.vercel.app/cart");
      
      return data;
     }
@@ -15,10 +15,10 @@ import toast from "react-hot-toast";
 export const createcart = createAsyncThunk(
     "cart/craetecart",
     async(id)=>{
-        const {data} = await axios.post("http://localhost:9000/cart",id);
+        const {data} = await axios.post("https://mern-project-woad.vercel.app/cart",id);
         toast.success("cart added")
         if(data){
-            window.location.replace("http://localhost:3000/cart")
+            window.location.replace("https://mern-project-woad.vercel.app/cart")
         
         }
         
@@ -31,7 +31,7 @@ export const createcart = createAsyncThunk(
 export const deletecart = createAsyncThunk(
     "cart/deletecart",
     async(id)=>{
-        const {data}  = await axios.delete(`http://localhost:9000/cart/${id}`);
+        const {data}  = await axios.delete(`https://mern-project-woad.vercel.app/cart/${id}`);
         toast.success("product deleted")
         return id;
        

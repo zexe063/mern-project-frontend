@@ -11,12 +11,12 @@ export const createuser = createAsyncThunk(
     "register/createuser",
     async(id)=>{
       
-        const {data}= await axios.post("http://localhost:9000/auth/signup", id);
+        const {data}= await axios.post("https://mern-project-woad.vercel.app/auth/signup", id);
         console.log(data)
         if(data == "resgister"){
             
             toast.success("register sucess");
-            window.location.replace('http://localhost:3000/auth/login')
+            window.location.replace('https://mern-project-woad.vercel.app/auth/login')
         }
          else if(data == "invalid token"){
  toast.error("invalid token")
