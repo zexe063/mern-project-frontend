@@ -17,6 +17,11 @@ export const createcart = createAsyncThunk(
     async(id)=>{
         const {data} = await axios.post("http://localhost:9000/cart",id);
         toast.success("cart added")
+        if(data){
+            window.location.replace("http://localhost:3000/cart")
+        
+        }
+        
         return data;
        
 

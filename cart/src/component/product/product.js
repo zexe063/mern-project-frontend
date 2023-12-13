@@ -23,6 +23,7 @@ const dispatch = useDispatch()
 const product  = useSelector(state=>state.products.item);
 
 function selectvalue(e){
+  console.log(e.target.value)
  dispatch(sortproduct(e.target.value));
 }
 
@@ -43,7 +44,8 @@ return(
   <div className=" flex justify-end p-2">
     <select className=" font-Inter p-2 rounded-md md:p-3 md:rounded-md" onChange={selectvalue}>
     
-      <option value="price:ascending">decrese</option>
+    <option>sort</option>
+      <option value="price:ascending">decraese</option>
       <option  value="price:descending">Increase</option>
     </select>
   </div>
