@@ -21,7 +21,7 @@ export const createuser = createAsyncThunk(
          else if(data == "invalid token"){
  toast.error("invalid token")
          }
-         else if("email registered"){
+         else if(data=="email registered"){
     toast.error("user registered")
          }
         else{
