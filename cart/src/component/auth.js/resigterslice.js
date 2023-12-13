@@ -16,7 +16,7 @@ export const createuser = createAsyncThunk(
         if(data == "resgister"){
             
             toast.success("register sucess");
-            window.location.replace('https://mern-project-woad.vercel.app/auth/login')
+            window.location.replace('https://mern-frontend-smoky.vercel.app//auth/login')
         }
          else if(data == "invalid token"){
  toast.error("invalid token")
