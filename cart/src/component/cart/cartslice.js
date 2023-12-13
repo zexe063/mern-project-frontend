@@ -18,7 +18,7 @@ export const createcart = createAsyncThunk(
         const {data} = await axios.post("https://mern-project-woad.vercel.app/cart",id);
         toast.success("cart added")
         if(data){
-            window.location.replace("https://mern-frontend-smoky.vercel.app//cart")
+            window.location.replace("https://mern-frontend-smoky.vercel.app/cart")
         
         }
         
