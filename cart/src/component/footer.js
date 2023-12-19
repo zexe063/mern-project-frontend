@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
    return (
+    <div className=" mt-[30px]">
        <footer className="bg-white border-y">
            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                <div className="md:flex md:justify-between">
@@ -37,7 +38,7 @@ function Footer() {
                            <ul className="text-gray-500 font-medium">
                                <li className="mb-4">
                                    <a
-                                       href="https://github.com/hiteshchoudhary"
+                                       href="https://github.com/zexe063"
                                        className="hover:underline"
                                        target="_blank"
                                        rel="noreferrer"
@@ -56,12 +57,12 @@ function Footer() {
                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                            <ul className="text-gray-500 font-medium">
                                <li className="mb-4">
-                                   <Link to="#" className="hover:underline">
+                                   <Link to="/legal" className="hover:underline">
                                        Privacy Policy
                                    </Link>
                                </li>
                                <li>
-                                   <Link to="#" className="hover:underline">
+                                   <Link to="/terms" className="hover:underline">
                                        Terms &amp; Conditions
                                    </Link>
                                </li>
@@ -159,6 +160,7 @@ function Footer() {
                </div>
            </div>
        </footer>
+       </div>
    );
 }
 

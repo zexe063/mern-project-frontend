@@ -23,6 +23,10 @@ import registerReducer from "./component/auth.js/resigterslice"
 import loginReducer from "./component/auth.js/loginslice";
 import Forgetpassword from './component/auth.js/forgetpassword';
 import forgetpasswordsliceReducer  from './component/auth.js/forgetpassslice';
+import Contact from './conatct';
+import About from './about';
+import Privacy from './component/privacy';
+import Terms from './component/terms';
 
 const store = configureStore({
 reducer:{
@@ -49,7 +53,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element=<App />>
 
-    <Route path='' element=<Productdata />></Route>
+    <Route path='/' element=<Productdata />></Route>
     <Route path='cart' element=<Cart />></Route>
     <Route path='cart' element=<Cart />></Route>
     <Route path='cart/checkout' element=<Checkout />></Route>
@@ -61,8 +65,10 @@ const router = createBrowserRouter(
     <Route  path='auth/signup' element=<Register />></Route>
     <Route  path='auth/login' element=<Login />></Route> 
     <Route  path='auth/forgetpassword' element=<Forgetpassword />></Route> 
-    
-
+    <Route path='/contact' element= <Contact />></Route>
+    <Route path='/about' element= <About />></Route>
+    <Route path='/legal' element= <Privacy />></Route>
+<Route path='/terms' element= <Terms />></Route>
    
     
 </Route>
